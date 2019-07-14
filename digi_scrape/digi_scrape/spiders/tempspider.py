@@ -7,15 +7,13 @@ from digi_scrape.items import DigiOrder
 
 
 BASE_URL = "https://www.digikala.com"
-#USER_NAME = "kowthar_atz@yahoo.com"
-#PASSWORD = "91406342"
 USER_NAME = input("Enter your digikala account username: ")
 PASSWORD = input("Enter your digikala account password: ")
 JSON_OUTPUT = "temp.json"
 
 
 class DigiBoughtSpider(Spider):
-    name = "digi_bought_scrape2"
+    name = "digi_bought_scrape"
     start_urls = [BASE_URL+'/profile/orders/']
 
     def parse(self, response):
